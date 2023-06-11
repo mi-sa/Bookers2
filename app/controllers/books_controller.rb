@@ -25,6 +25,7 @@ class BooksController < ApplicationController
     user_info_new_book
     @book = Book.find(params[:id])
     @user = @book.user
+    @book_comment = BookComment.new
   end
 
   def edit
@@ -63,5 +64,5 @@ class BooksController < ApplicationController
       redirect_to books_path
     end
   end
-  
+
 end

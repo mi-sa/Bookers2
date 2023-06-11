@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def index
     user_info_new_book
     @users = User.all
+    @book = Book.new
   end
 
   def show
@@ -42,5 +43,5 @@ class UsersController < ApplicationController
       redirect_to user_path(current_user.id)
     end
   end
-  
+
 end
